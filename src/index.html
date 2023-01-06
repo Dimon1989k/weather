@@ -1,14 +1,66 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Page title</title>
-    <link rel="stylesheet" href="./sass/index.scss" />
-    <script type="module" src="./index.js"></script>
+
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <title>Weather</title>
   </head>
   <body>
-    <!-- ❗️❗️❗️ Add partials like so for every page -->
-    <include src="./partials/example.html"></include>
+    <div class="weather-app">
+      <div class="container">
+        <h3 class="brand">Weather</h3>
+        <div>
+          <h1 class="temp">16&#176</h1>
+          <div class="city-time">
+            <h1 class="name">Kiyv</h1>
+            <small>
+                <span class="time">06.09</span>
+                <span class="date">Monday September 19</span>
+            </small>
+            <div class="weather">
+                <img src="./image/Sun.png" alt="icon" class="icon" width="50px" height="50px">
+                <span class="condition">Cloudy</span>
+            </div> 
+          </div>
+        </div>
+      </div>   
+    <div class="panel">
+       <form id="locationInput">
+        <input type="text" class="search" placeholder="Search location...">
+        <button type="submit" class="submit">
+            <i class="fas fa-search"></i>
+        </button>
+       </form>
+       <ul class="cities">
+        <li class="city">Dnipro</li>
+        <li class="city">Kropyvnytsky</li>
+        <li class="city">Lviv</li>
+        <li class="city">Ternopil</li>
+       </ul>
+       <ul class="details">
+         <h4>Weather details</h4>
+        <li>
+           
+            <span>Cloudy</span>
+            <span class="cloud">89%</span>
+        </li>
+        <li>
+            <span>Humidity</span>
+            <span class="humidity">64%</span>
+        </li>
+        <li>
+            <span>Wind</span>
+            <span class="wind">8 km/h</span>
+        </li>
+       </ul>
+    </div>
+     </div>
+     <script src="./index.js" type="module"></script>
   </body>
 </html>
